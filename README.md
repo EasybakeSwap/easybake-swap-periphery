@@ -1,6 +1,6 @@
-# Pancake Router
+# EasyBake Router
 
-### Bsc-Test
+### Rinkeby
 
 The following assumes the use of `node@>=10`.
 
