@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 // File: contracts/interfaces/IEasyBakeFactory.sol
 
 pragma solidity >=0.5.0;
@@ -19,8 +21,6 @@ interface IEasyBakeFactory {
 }
 
 // File: contracts/libraries/TransferHelper.sol
-
-// SPDX-License-Identifier: MIT
 
 pragma solidity >=0.6.0;
 
@@ -107,7 +107,7 @@ interface IEasyBakePair {
 
 // File: contracts/libraries/SafeMath.sol
 
-pragma solidity =0.6.6;
+pragma solidity >=0.6.6;
 
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
 
@@ -339,13 +339,7 @@ interface IWETH {
 
 // File: contracts/EasyBakeRouter01.sol
 
-pragma solidity =0.6.6;
-
-
-
-
-
-
+pragma solidity >=0.6.6;
 
 contract EasyBakeRouter01 is IEasyBakeRouter01 {
     address public immutable override factory;

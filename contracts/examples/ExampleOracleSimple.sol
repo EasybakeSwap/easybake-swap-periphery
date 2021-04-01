@@ -1,8 +1,8 @@
 pragma solidity =0.6.6;
 
-import '@uniswap/v2-core/contracts/interfaces/IEasyBakeFactory.sol';
-import '@uniswap/v2-core/contracts/interfaces/IEasyBakePair.sol';
-import '@uniswap/lib/contracts/libraries/FixedPoint.sol';
+import 'easybake-swap-core/contracts/interfaces/IEasyBakeFactory.sol';
+import 'easybake-swap-core/contracts/interfaces/IEasyBakePair.sol';
+import 'easybake-swap-lib/contracts/libraries/FixedPoint.sol';
 
 import '../libraries/EasyBakeOracleLibrary.sol';
 import '../libraries/EasyBakeLibrary.sol';

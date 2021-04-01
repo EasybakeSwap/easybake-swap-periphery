@@ -4,8 +4,8 @@ import { deployContract } from 'ethereum-waffle'
 
 import { expandTo18Decimals } from './utilities'
 
-import EasyBakeFactory from '@uniswap/v2-core/build/EasyBakeFactory.json'
-import IEasyBakePair from '@uniswap/v2-core/build/IEasyBakePair.json'
+import EasyBakeFactory from 'easybake-swap-core/build/EasyBakeFactory.json'
+import IEasyBakePair from 'easybake-swap-core/build/IEasyBakePair.json'
 
 import ERC20 from '../../build/ERC20.json'
 import WETH9 from '../../build/WETH9.json'

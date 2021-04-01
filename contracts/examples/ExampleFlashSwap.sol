@@ -1,6 +1,6 @@
 pragma solidity =0.6.6;
 
-import '@uniswap/v2-core/contracts/interfaces/IEasyBakeCallee.sol';
+import 'easybake-swap-core/contracts/interfaces/IEasyBakeCallee.sol';
 
 import '../libraries/EasyBakeLibrary.sol';
 import '../interfaces/V1/IUniswapV1Factory.sol';

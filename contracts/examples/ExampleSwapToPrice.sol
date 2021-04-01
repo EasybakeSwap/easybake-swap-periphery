@@ -1,7 +1,7 @@
 pragma solidity =0.6.6;
 
 import '../interfaces/IEasyBakePair.sol';
-import '@uniswap/lib/contracts/libraries/Babylonian.sol';
+import 'easybake-swap-lib/contracts/libraries/Babylonian.sol';
 import '../libraries/TransferHelper.sol';
 
 import '../interfaces/IERC20.sol';
