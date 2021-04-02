@@ -1,4 +1,4 @@
-pragma solidity =0.6.6;
+pragma solidity >=0.6.6;
 
 import 'easybake-swap-core/contracts/interfaces/IEasyBakeCallee.sol';
 
@@ -9,7 +9,7 @@ import '../interfaces/IEasyBakeRouter01.sol';
 import '../interfaces/IERC20.sol';
 import '../interfaces/IWETH.sol';
 
-contract ExampleFlashSwap is IEasyBakeCallee {
+abstract contract ExampleFlashSwap is IEasyBakeCallee {
     IUniswapV1Factory immutable factoryV1;
     address immutable factory;
     IWETH immutable WETH;
@@ -25,7 +25,7 @@ contract ExampleFlashSwap is IEasyBakeCallee {
     receive() external payable {}
 
     // gets tokens/WETH via a V2 flash swap, swaps for the ETH/tokens on V1, repays V2, and keeps the rest!
-    function EasyBakeCall(address sender, uint amount0, uint amount1, bytes calldata data) external override {
+    function EasyBakeCall(address sender, uint amount0, uint amount1, bytes calldata data) external {
         address[] memory path = new address[](2);
         uint amountToken;
         uint amountETH;

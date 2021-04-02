@@ -1,7 +1,8 @@
+
 pragma solidity >=0.6.6;
 
-import './interfaces/IEasyBakeFactory.sol';
-import './libraries/TransferHelper.sol';
+import 'easybake-swap-core/contracts/interfaces/IEasyBakeFactory.sol';
+import 'easybake-swap-lib/contracts/libraries/TransferHelper.sol';
 
 import './interfaces/IEasyBakeRouter02.sol';
 import './libraries/EasyBakeLibrary.sol';
@@ -9,7 +10,7 @@ import './libraries/SafeMath.sol';
 import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 
-contract EasyBakeRouter is IEasyBakeRouter02 {
+contract EasyBakeRouter02 is IEasyBakeRouter02 {
     using SafeMath for uint;
 
     address public immutable override factory;

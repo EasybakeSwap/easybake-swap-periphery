@@ -1,6 +1,6 @@
 {
   "name": "easybake-swap-periphery",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "🎚 Peripheral smart contracts for interacting with the EasyBake finance protocol.",
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "easybake-swap-core": "^0.2.1",
-    "easybake-swap-lib": "^0.1.0",
+    "easybake-swap-lib": "^0.2.0",
     "truffle-flattener": "^1.5.0",
     "truffle-hdwallet-provider": "^1.0.17",
     "truffle-plugin-verify": "^0.4.0"

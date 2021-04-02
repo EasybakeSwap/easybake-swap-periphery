@@ -10,5 +10,4 @@ correctness and security than other contracts in this repository.
 E.g., we have explicitly excluded these contracts from the
 [bug bounty](https://uniswap.org/bug-bounty/#scope). 
 
-You must do your own due diligence if you wish to use code
-from these examples in your project.
+You must do your own due diligence if you wish to use code from these examples in your project.

@@ -1,4 +1,4 @@
-pragma solidity =0.6.6;
+pragma solidity >=0.6.6;
 
 import '../interfaces/IEasyBakePair.sol';
 import 'easybake-swap-lib/contracts/libraries/Babylonian.sol';
