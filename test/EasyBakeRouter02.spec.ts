@@ -1,15 +1,15 @@
 import chai, { expect } from 'chai'
-import { solidity, MockProvider, createFixtureLoader, deployContract } from 'ethereum-waffle'
+import { solidity, MockProvider, createFixtureLoader } from 'ethereum-waffle'
 import { Contract } from 'ethers'
-import { BigNumber, bigNumberify } from 'ethers/utils'
+import { bigNumberify } from 'ethers/utils'
 import { MaxUint256 } from 'ethers/constants'
-import IEasyBakePair from 'easybake-swap-core/build/IEasyBakePair.json'
+// import IEasyBakePair from 'easybake-swap-core/build/IEasyBakePair.json'
 
 import { v2Fixture } from './shared/fixtures'
-import { expandTo18Decimals, getApprovalDigest, MINIMUM_LIQUIDITY } from './shared/utilities'
+// import { expandTo18Decimals, getApprovalDigest, MINIMUM_LIQUIDITY } from './shared/utilities'
 
-import DeflatingERC20 from '../build/DeflatingERC20.json'
-import { ecsign } from 'ethereumjs-util'
+// import DeflatingERC20 from '../build/DeflatingERC20.json'
+// import { ecsign } from 'ethereumjs-util'
 
 chai.use(solidity)
 
@@ -36,11 +36,11 @@ describe('EasyBakeRouter02', () => {
     router = fixture.router02
   })
 
+
   it('getAmountsOut', async () => {
     await token0.approve(router.address, MaxUint256)
     await token1.approve(router.address, MaxUint256)
-    console.log(
-      token0.address,
+    console.log(      token0.address,
       token1.address,
       bigNumberify(10000),
       bigNumberify(10000),
@@ -48,8 +48,7 @@ describe('EasyBakeRouter02', () => {
       0,
       wallet.address,
       MaxUint256,
-      overrides
-    )
+      overrides)
     await router.addLiquidity(
       token0.address,
       token1.address,
@@ -68,4 +67,5 @@ describe('EasyBakeRouter02', () => {
     const path = [token0.address, token1.address]
     expect(await router.getAmountsOut(bigNumberify(2), path)).to.deep.eq([bigNumberify(2), bigNumberify(1)])
   })
+
 })

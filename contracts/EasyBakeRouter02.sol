@@ -1,4 +1,3 @@
-
 pragma solidity >=0.6.6;
 
 import 'easybake-swap-core/contracts/interfaces/IEasyBakeFactory.sol';
