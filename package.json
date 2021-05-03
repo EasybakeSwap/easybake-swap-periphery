@@ -1,6 +1,6 @@
 {
   "name": "easybake-swap-periphery",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "🎚 Peripheral smart contracts for interacting with the EasyBake finance protocol.",
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
@@ -8,7 +8,7 @@
     "clean": "rimraf ./build/",
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
-    "flatten:router": "truffle-flattener ./contracts/EasyBakeRouter.sol > ./contracts/flats/EasyBakeRouter_flat.sol",
+    "flat:router": "truffle-flattener ./contracts/EasyBakeRouter.sol > ./contracts/flats/EasyBakeRouter_flat.sol",
     "pretest": "yarn compile",
     "test": "mocha",
     "prepublishOnly": "yarn test"

@@ -22,7 +22,7 @@ library EasyBakeLibrary {
                 hex'ff',
                 factory,
                 keccak256(abi.encodePacked(token0, token1)),
-                hex'22a1286a31d3ba7955cd020f3e246bc8957122e6547bd3a544a401a725a88b72' // init code hash
+                hex'ce44eb42197293184ca965286dc45bc614fc721cc6115a07f51f462815cadf35' // init code hash
             ))));
     }
 
