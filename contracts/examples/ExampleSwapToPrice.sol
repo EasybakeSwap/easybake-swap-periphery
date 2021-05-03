@@ -1,13 +1,14 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity >=0.6.6;
 
 import '../interfaces/IEasyBakePair.sol';
-import 'easybake-swap-lib/contracts/libraries/Babylonian.sol';
-import '../libraries/TransferHelper.sol';
-
-import '../interfaces/IERC20.sol';
+import '../libraries/Babylonian.sol';
+import 'easybake-swap-lib/contracts/utils/TransferHelper.sol';
+import 'easybake-swap-core/contracts/interfaces/IERC20.sol';
 import '../interfaces/IEasyBakeRouter01.sol';
-import '../libraries/SafeMath.sol';
-import '../libraries/EasyBakeLibrary.sol';
+import 'easybake-swap-core/contracts/libraries/SafeMath.sol';
+import { EasyBakeLibrary } from '../libraries/EasyBakeLibrary.sol';
 
 contract ExampleSwapToPrice {
     using SafeMath for uint256;
@@ -33,9 +34,9 @@ contract ExampleSwapToPrice {
 
         uint256 leftSide = Babylonian.sqrt(
             invariant.mul(aToB ? truePriceTokenA : truePriceTokenB).mul(1000) /
-            uint256(aToB ? truePriceTokenB : truePriceTokenA).mul(997)
+            uint256(aToB ? truePriceTokenB : truePriceTokenA).mul(998)
         );
-        uint256 rightSide = (aToB ? reserveA.mul(1000) : reserveB.mul(1000)) / 997;
+        uint256 rightSide = (aToB ? reserveA.mul(1000) : reserveB.mul(1000)) / 998;
 
         // compute the amount that must be sent to move the price to the profit-maximizing price
         amountIn = leftSide.sub(rightSide);

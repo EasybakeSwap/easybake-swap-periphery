@@ -1,19 +1,14 @@
 {
   "name": "easybake-swap-periphery",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "🎚 Peripheral smart contracts for interacting with the EasyBake finance protocol.",
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
-    "copy-v1-artifacts": "ncp ./buildV1 ./build",
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
-    "postcompile": "yarn copy-v1-artifacts",
-    "flatten:migrator": "truffle-flattener ./contracts/EasyBakeMigrator.sol > ./contracts/flats/EasyBakeMigrator_flat.sol",
     "flatten:router": "truffle-flattener ./contracts/EasyBakeRouter.sol > ./contracts/flats/EasyBakeRouter_flat.sol",
-    "flatten:router01": "truffle-flattener ./contracts/EasyBakeRouter01.sol > ./contracts/flats/EasyBakeRouter01_flat.sol",
-    "flatten:router02": "truffle-flattener ./contracts/EasyBakeRouter02.sol > ./contracts/flats/EasyBakeRouter02_flat.sol",
     "pretest": "yarn compile",
     "test": "mocha",
     "prepublishOnly": "yarn test"
@@ -31,8 +26,8 @@
     "contracts"
   ],
   "dependencies": {
-    "easybake-swap-core": "^0.2.1",
-    "easybake-swap-lib": "^0.2.0",
+    "easybake-swap-core": "^1.0.0",
+    "easybake-swap-lib": "^0.3.1",
     "truffle-flattener": "^1.5.0",
     "truffle-hdwallet-provider": "^1.0.17",
     "truffle-plugin-verify": "^0.4.0"
@@ -47,7 +42,7 @@
     "ncp": "^2.0.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
-    "solc": "0.6.6",
+    "solc": "^0.6.12 ",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
   },

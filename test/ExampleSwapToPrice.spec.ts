@@ -4,7 +4,7 @@ import { MaxUint256 } from 'ethers/constants'
 import { solidity, MockProvider, createFixtureLoader, deployContract } from 'ethereum-waffle'
 
 import { expandTo18Decimals } from './shared/utilities'
-import { v2Fixture } from './shared/fixtures'
+import { Fixture } from './shared/fixtures'
 
 import ExampleSwapToPrice from '../build/ExampleSwapToPrice.json'
 
@@ -29,7 +29,7 @@ describe('ExampleSwapToPrice', () => {
   let swapToPriceExample: Contract
   let router: Contract
   beforeEach(async function() {
-    const fixture = await loadFixture(v2Fixture)
+    const fixture = await loadFixture(Fixture)
     token0 = fixture.token0
     token1 = fixture.token1
     pair = fixture.pair
@@ -37,7 +37,7 @@ describe('ExampleSwapToPrice', () => {
     swapToPriceExample = await deployContract(
       wallet,
       ExampleSwapToPrice,
-      [fixture.factoryV2.address, fixture.router.address],
+      [fixture.factory.address, fixture.router.address],
       overrides
     )
   })

@@ -1,8 +1,9 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity >=0.5.0;
 
-import '../interfaces/IEasyBakePair.sol';
-
-import "./SafeMath.sol";
+import 'easybake-swap-core/contracts/interfaces/IEasyBakePair.sol';
+import 'easybake-swap-core/contracts/libraries/SafeMath.sol';
 
 library EasyBakeLibrary {
     using SafeMath for uint;

@@ -1,6 +1,8 @@
-pragma solidity =0.6.6;
+// SPDX-License-Identifier: MIT
 
-import '../libraries/SafeMath.sol';
+pragma solidity >=0.6.6;
+
+import 'easybake-swap-core/contracts/libraries/SafeMath.sol';
 
 contract DeflatingERC20 {
     using SafeMath for uint;
