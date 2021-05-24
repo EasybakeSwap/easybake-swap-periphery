@@ -2,7 +2,7 @@
 
 pragma solidity >=0.6.6;
 
-import 'easybake-swap-core/contracts/libraries/SafeMath.sol';
+import '../libraries/SafeMath.sol';
 
 contract DeflatingERC20 {
     using SafeMath for uint;

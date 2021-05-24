@@ -6,7 +6,7 @@ import 'easybake-swap-core/contracts/interfaces/IEasyBakePair.sol';
 import 'easybake-swap-lib/contracts/utils/FixedPoint.sol';
 
 // library with helper methods for oracles that are concerned with computing average prices
-library MakiswapOracleLibrary {
+library EasyBakeOracleLibrary {
     using FixedPoint for *;
 
     // helper function that returns the current block timestamp within the range of uint32, i.e. [0, 2**32 - 1]
