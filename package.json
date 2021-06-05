@@ -1,6 +1,6 @@
 {
   "name": "easybake-swap-periphery",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "🎚 Peripheral smart contracts for interacting with the EasyBake finance protocol.",
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
